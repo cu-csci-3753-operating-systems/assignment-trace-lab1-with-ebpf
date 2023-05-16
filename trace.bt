@@ -1,0 +1,8 @@
+#!/usr/local/bin/bpftrace
+#
+# Note that this explicitly uses the bpftrace in /usr/local/bin
+# 
+
+uprobe:./file-io:native {
+    printf("> native\n");
+}
